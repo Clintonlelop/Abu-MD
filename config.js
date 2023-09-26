@@ -10,11 +10,11 @@ const DATABASE_URL = process.env.DATABASE_URL === undefined ? "./lib/database.db
 
 module.exports = {
 
-  ANTILINK: toBool(process.env.ANTI_LINK) || false,
+  ANTILINK: toBool(process.env.ANTI_LINK) || true,
 
   LOGS: toBool(process.env.LOGS) || true,
 
-  ALIVE_DATA : process.env.ALIVE_DATA || "_iam alive now &sender_",
+  ALIVE_DATA : process.env.ALIVE_DATA || "```iam alive now &sender_```",
 
   DATABASE: DATABASE_URL === "./lib/database.db" ? new Sequelize({ dialect: "sqlite", storage: DATABASE_URL, logging: false }) : new Sequelize(DATABASE_URL, {dialect: "postgres", ssl: true, protocol: "postgres", dialectOptions: { native: true, ssl: { require: true, rejectUnauthorized: false },}, logging: false }),
 
@@ -26,7 +26,7 @@ module.exports = {
   
   WARN_LIMIT: process.env.WARN_LIMIT || "3",
 
-  HANDLERS:process.env.HANDLER === "false" || process.env.HANDLERS || '^,',
+  HANDLERS:process.env.HANDLER === "true" || process.env.HANDLERS || '.',
 
   IMGBB_KEY: ["76a050f031972d9f27e329d767dd988f", "deb80cd12ababea1c9b9a8ad6ce3fab2", "78c84c62b32a88e86daf87dd509a657a"],
 
@@ -38,21 +38,21 @@ module.exports = {
 
   ANTIFAKE : process.env.ANTIFAKE || '',
 
-  FORWARD: process.env.FORWARD || '𝐀𝐁𝐔 𝐌𝐃 𝐁𝐎𝐓;~Jasil;Copyright by Abu;https://i.ibb.co/nc4MKWb/ae8d07d7943e.jpg;audio;audio/mp4;https://github.com/Afx-Abu/Abu-MD',
+  FORWARD: process.env.FORWARD || '𝘾𝙇𝞘𝞜𝙏𝞗𝞜 𝞑𝞗𝙏;𝙇𝞢𝙇𝞗𝞠;Copyright by 𝙇𝞢𝙇𝞗𝞠;https://i.ibb.co/nc4MKWb/ae8d07d7943e.jpg;audio;audio/mp4;https://github.com/Afx-Abu/Abu-MD',
   
-  BOT_INFO: process.env.BOT_INFO || '𝐀𝐁𝐔 𝐌𝐃 𝐁𝐎𝐓;~Jasil;Copyright by Abu MD;https://i.ibb.co/nc4MKWb/ae8d07d7943e.jpg',
+  BOT_INFO: process.env.BOT_INFO || '𝘾𝙇𝞘𝞜𝙏𝞗𝞜 𝞑𝞗𝙏;𝙇𝞢𝙇𝞗𝞠;Copyright by 𝙇𝞢𝙇𝞗𝞠;https://i.ibb.co/nc4MKWb/ae8d07d7943e.jpg',
 
   WELCOME_MSG: process.env.WELCOME_MSG || "Hi @user Welcome to @gname",
 
   GOODBYE_MSG: process.env.GOODBYE_MSG || "Hi @user It was Nice Seeing you",
 
-  STICKER_DATA: process.env.STICKER_DATA || "Abu",
+  STICKER_DATA: process.env.STICKER_DATA || "𝙇𝞢𝙇𝞗𝞠",
 
   ACR_A: "ff489a0160188cf5f0750eaf486eee74",
 
   ACR_S: "ytu3AdkCu7fkRVuENhXxs9jsOW4YJtDXimAWMpJp",
 
-  SUDO: process.env.SUDO || "917025994178",
+  SUDO: process.env.SUDO || "2348160208114",
 
   HEROKU_APP_NAME: process.env.HEROKU_APP_NAME || " ",
 
